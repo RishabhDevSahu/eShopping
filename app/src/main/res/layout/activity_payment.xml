@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PaymentActivity"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:id="@+id/backSymbol"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/img"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/selectedCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Payment"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="Autofill" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize,UselessLeaf">
+
+
+            <com.fevziomurtekin.payview.Payview
+                android:id="@+id/payview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBgColor="@android:color/holo_blue_light"
+                app:cardFgColor="@android:color/white"
+                app:cardTextColor="@color/black"
+                app:cardNameHelperText="Enter to card name. Max 25 characters."
+                app:cardCvTextSize="14"
+                app:cardNoTextSize="14"
+                app:cardNumberHelperText="You must enter your 16-digit card number."
+                app:cardYearTextSize="13"
+                app:cardNameTextSize="15"
+                app:cardMonthTextSize="13"
+                app:cardAnimationType="vertical"
+                app:cardCvErrorText="You must enter 3-digit characters"
+                app:cardMonthErrorText="You must enter 2-digit characters and you'll enter to number the most digit-value is '12'"
+                app:cardYearErrorText="You must enter 2-digit characters and you'll enter to number the most digit-value is '99'"
+                app:cardExpiredErrorText="Your card has expired. Please enter the usage date correctly."
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

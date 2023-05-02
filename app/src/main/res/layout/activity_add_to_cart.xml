@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddToCartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:id="@+id/backSymbol"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/img"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/selectedCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="My Cart"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="Autofill" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessLeaf">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomCartLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/addToCartRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomCartLayout"
+            android:visibility="invisible"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                tools:ignore="NotSibling,UselessLeaf,UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:text="SubTotal:"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:ignore="Autofill,RtlCompat" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="₹"
+                            android:textColor="#F30202"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            tools:ignore="Autofill,RtlCompat" />
+
+                        <TextView
+                            android:id="@+id/cartSubTotalPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="3dp"
+                            android:text="500"
+                            android:textColor="#F30202"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            tools:ignore="Autofill,RtlCompat" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/proceedToCheckoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:includeFontPadding="true"
+                        android:text="Proceed To Checkout"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emptyCartLayout"
+            android:layout_marginTop="150dp"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:padding="15dp"
+                android:src="@drawable/emptycart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:padding="4dp"
+                android:text="Your Cart Is Empty"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                tools:ignore="Autofill" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
